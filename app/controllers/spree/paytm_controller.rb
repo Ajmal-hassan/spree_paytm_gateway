@@ -26,7 +26,6 @@ module Spree
         @param_list['MOBILE_NO'] = phone
         @param_list['EMAIL'] = order.email
         @param_list['CALLBACK_URL'] = "#{payment_method.preferred_site_url}/paytm/confirm"
-         puts "******************#{@param_list['CALLBACK_URL'] }"
         checksum = payment_method.generate_checksum(@param_list, payment_method.preferred_merchant_key)
         @param_list['CHECKSUMHASH'] = checksum
         @paytm_txn_url = payment_method.txn_url
