@@ -22,4 +22,4 @@ Paytm payment gateway integration for spree
 
         Spree::Gateway::Paytm
 
-6. In admin admin/payment_methods in paytm section add your hostname like 'http://HOSTNAME' example  'http://localhost:3000'in SITE URL:
+6. In admin admin/payment_methods in paytm section add your hostname like http://HOSTNAME example  http://localhost:3000 in SITE URL:
