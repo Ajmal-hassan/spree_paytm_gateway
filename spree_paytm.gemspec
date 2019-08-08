@@ -15,8 +15,6 @@ Gem::Specification.new do |s|
   s.email     = 'nirankarsingh247@gmail.com'
   s.homepage  = 'https://github.com/niri4/spree_paytm_gateway'
 
-  s.files        = `git ls-files`.split("\n")
-  s.test_files   = `git ls-files -- spec/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
