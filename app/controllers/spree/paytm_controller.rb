@@ -33,7 +33,7 @@ module Spree
     end
 
     def confirm
-      payment_method = Spree::PaymentMethod.find_by(type: Spree::Gateway::Paytm)
+      payment_method = Spree::PaymentMethod.find_by(type: 'Spree::Gateway::Paytm')
       checksum_hash = params["CHECKSUMHASH"]
       params.delete("CHECKSUMHASH")
       @status = params["STATUS"]
