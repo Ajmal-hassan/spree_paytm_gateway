@@ -50,13 +50,14 @@ module Spree
         response_code: params['RESPCODE']
       )
       if @status == "TXN_SUCCESS"
-        @order.next
+#         @order.next
         @message = Spree.t(:order_processed_successfully)
         @current_order = nil
         flash.notice = Spree.t(:order_processed_successfully)
         flash['order_completed'] = true
         @error = false
-        @redirect_path = order_path(@order)
+#         @redirect_path = order_path(@order)
+        @redirect_path = checkout_state_path('address')
       else
         @payment.state = "failed"
         @payment.save
